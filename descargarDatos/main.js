@@ -5,10 +5,10 @@ ctx.fillStyle = "rgb(34, 143, 25)";
 var butDow = document.getElementById("butDow");
 butDow.addEventListener('click', moverBarra);
 
-const LIMITE_CARGA = 450;
+const LIMITE_CARGA = 400;
 
 var rect = {
-    posX: 150,
+    posX: 100,
     posY: 300,
     ancho: 10,
     alto: 30
@@ -26,12 +26,11 @@ function moverBarra(){
                 interval = null;
             }
 
-            rect.posX += 0.5;
             rect.ancho += 10;
             limpiarTablero();
             pintarRectangulo(rect); 
             //pintarImagenDeFondo();
-        }, 10)
+        }, 100)
     }
     else{
         clearInterval(interval);
@@ -40,7 +39,7 @@ function moverBarra(){
 }
 
 function estaEnElLimite(){
-    return rect.posX >= LIMITE_CARGA;
+    return rect.ancho >= LIMITE_CARGA;
 }
 function limpiarTablero(){
     ctx.clearRect(0,0, canvas.width, canvas.height);
