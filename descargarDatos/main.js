@@ -5,14 +5,23 @@ ctx.fillStyle = "rgb(34, 143, 25)";
 var butDow = document.getElementById("butDow");
 butDow.addEventListener('click', moverBarra);
 
-const LIMITE_CARGA = 400;
+var imagenBarra = new Image();
+imagenBarra.src = "./barraM.PNG";
+const LIMITE_CARGA = 355;
 
 var rect = {
-    posX: 100,
-    posY: 300,
+    posX: 85,
+    posY: 240,
     ancho: 10,
-    alto: 30
+    alto: 30 
+
+    // posX: 100,
+    // posY: 300,
+    // ancho: 10,
+    // alto: 30
 }
+
+pintarImagenDeFondo();
 
 var interval = null;
 
@@ -26,10 +35,10 @@ function moverBarra(){
                 interval = null;
             }
 
-            rect.ancho += 10;
+            rect.ancho += 7;
             limpiarTablero();
             pintarRectangulo(rect); 
-            //pintarImagenDeFondo();
+            pintarImagenDeFondo();
         }, 100)
     }
     else{
@@ -47,3 +56,6 @@ function limpiarTablero(){
 function pintarRectangulo({ posX, posY, ancho, alto}){
     ctx.fillRect(posX, posY, ancho, alto);
 }
+function pintarImagenDeFondo(){
+    ctx.drawImage(imagenBarra, 0,0, canvas.width, canvas.height);
+} 
