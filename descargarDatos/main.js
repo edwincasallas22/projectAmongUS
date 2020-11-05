@@ -1,13 +1,27 @@
 var canvas = document.getElementById("game");
 var ctx = canvas.getContext('2d');
+const gif = document.getElementById("gif");
+
 
 ctx.fillStyle = "rgb(34, 143, 25)";
 var butDow = document.getElementById("butDow");
+butDow.addEventListener('click', () =>{
+    
+    gif.src = "https://media.giphy.com/media/tJrjQ5HzlOStHInsmw/giphy.gif";
+} )
+
+var carga = document.getElementById("carga");
 butDow.addEventListener('click', moverBarra);
+
+
 
 var imagenBarra = new Image();
 imagenBarra.src = "./barraM.PNG";
+
 const LIMITE_CARGA = 355;
+
+
+
 
 var rect = {
     posX: 85,
@@ -39,6 +53,7 @@ function moverBarra(){
             limpiarTablero();
             pintarRectangulo(rect); 
             pintarImagenDeFondo();
+            
         }, 100)
     }
     else{
@@ -55,7 +70,9 @@ function limpiarTablero(){
 }
 function pintarRectangulo({ posX, posY, ancho, alto}){
     ctx.fillRect(posX, posY, ancho, alto);
+
 }
 function pintarImagenDeFondo(){
     ctx.drawImage(imagenBarra, 0,0, canvas.width, canvas.height);
+    
 } 
