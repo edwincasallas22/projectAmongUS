@@ -213,9 +213,8 @@ function cambiarColorDiez(){
     if(botDiez.value == global)
     {
         botDiez.style.backgroundColor = "green";
-        diez = true;
-        global ++;
         console.log(global);
+        diez = true;
     }
     else{
         botDiez.style.backgroundColor = "red"
@@ -225,10 +224,13 @@ function cambiarColorDiez(){
         }, 400);      
 
     }
+    
 
 }
 
-if(uno==true && dos == true && tres == true && cuatro==true && cinco == true && seis == true && siete == true && ocho == true && nueve == true && diez == true){
-    alert("Task Completed!");
-    console.log("termino");
-}
+
+    
+    if(diez == true){
+        alert("Task Completed!");
+        console.log("termino");
+    }
