@@ -1,15 +1,15 @@
-var botUno= document.getElementById("uno");
-var botDos= document.getElementById("dos");
-var botTres= document.getElementById("tres");
-var botCuatro= document.getElementById("cuatro");
-var botCinco= document.getElementById("cinco");
-var botSeis= document.getElementById("seis");
-var botSiete= document.getElementById("siete");
-var botOcho= document.getElementById("ocho");
-var botNueve= document.getElementById("nueve");
-var botDiez= document.getElementById("diez");
+var botUno = document.getElementById("uno");
+var botDos = document.getElementById("dos");
+var botTres = document.getElementById("tres");
+var botCuatro = document.getElementById("cuatro");
+var botCinco = document.getElementById("cinco");
+var botSeis = document.getElementById("seis");
+var botSiete = document.getElementById("siete");
+var botOcho = document.getElementById("ocho");
+var botNueve = document.getElementById("nueve");
+var botDiez = document.getElementById("diez");
 
-var global = 1; 
+var global = 1;
 var uno = false;
 var dos = false;
 var tres = false;
@@ -34,7 +34,24 @@ botDiez.addEventListener('click', cambiarColorDiez);
 
 
 
-function reinicio(){
+var lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+listaNueva = lista.sort(function () { return Math.random() - 0.5 });
+console.log(lista);
+for (var i = 0; i < listaNueva.length; i++) {
+    botUno.value = listaNueva[0]
+    botDos.value = listaNueva[1]
+    botTres.value = listaNueva[2]
+    botCuatro.value = listaNueva[3]
+    botCinco.value = listaNueva[4]
+    botSeis.value = listaNueva[5]
+    botSiete.value = listaNueva[6]
+    botOcho.value = listaNueva[7]
+    botNueve.value = listaNueva[8]
+    botDiez.value = listaNueva[9]
+
+}
+
+function reinicio() {
     botUno.style.backgroundColor = "white";
     botDos.style.backgroundColor = "white";
     botTres.style.backgroundColor = "white";
@@ -47,13 +64,12 @@ function reinicio(){
     botDiez.style.backgroundColor = "white";
 }
 
-function cambiarColorUno(){
-   
-    if(botUno.value == global)
-    {
+function cambiarColorUno() {
+
+    if (botUno.value == global) {
         botUno.style.backgroundColor = "green";
         uno = true;
-        global ++;
+        global++;
         console.log(global);
     }
     // else{
@@ -64,173 +80,164 @@ function cambiarColorUno(){
     // // }
 
 }
-function cambiarColorDos(){
-    if(botDos.value == global)
-    {
+function cambiarColorDos() {
+    if (botDos.value == global) {
         botDos.style.backgroundColor = "green";
         dos = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botDos.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
 
         }, 400);
-          
+
     }
 }
-function cambiarColorTres(){
-    if(botTres.value == global)
-    {
+function cambiarColorTres() {
+    if (botTres.value == global) {
         botTres.style.backgroundColor = "green";
         tres = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botTres.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
         }, 400);
-          
+
     }
 
 }
-function cambiarColorCuatro(){
-    if(botCuatro.value == global)
-    {
+function cambiarColorCuatro() {
+    if (botCuatro.value == global) {
         botCuatro.style.backgroundColor = "green";
         cuatro = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botCuatro.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
 
-function cambiarColorCinco(){
-    if(botCinco.value == global)
-    {
+function cambiarColorCinco() {
+    if (botCinco.value == global) {
         botCinco.style.backgroundColor = "green";
         cinco = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botCinco.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
-function cambiarColorSeis(){
-    if(botSeis.value == global)
-    {
+function cambiarColorSeis() {
+    if (botSeis.value == global) {
         botSeis.style.backgroundColor = "green";
         seis = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botSeis.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
-function cambiarColorSiete(){
-    if(botSiete.value == global)
-    {
+function cambiarColorSiete() {
+    if (botSiete.value == global) {
         botSiete.style.backgroundColor = "green";
         siete = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botSiete.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
-function cambiarColorOcho(){
-    if(botOcho.value == global)
-    {
+function cambiarColorOcho() {
+    if (botOcho.value == global) {
         botOcho.style.backgroundColor = "green";
         ocho = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botOcho.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
-function cambiarColorNueve(){
-    if(botNueve.value == global)
-    {
+function cambiarColorNueve() {
+    if (botNueve.value == global) {
         botNueve.style.backgroundColor = "green";
         nueve = true;
-        global ++;
+        global++;
         console.log(global);
     }
-    else{
+    else {
         botNueve.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
 
 }
-function cambiarColorDiez(){
-    if(botDiez.value == global)
-    {
+function cambiarColorDiez() {
+    if (botDiez.value == global) {
         botDiez.style.backgroundColor = "green";
         console.log(global);
         diez = true;
     }
-    else{
+    else {
         botDiez.style.backgroundColor = "red"
-        setTimeout(() =>{
+        setTimeout(() => {
             global = 1;
             reinicio();
-        }, 400);      
+        }, 400);
 
     }
-    
+
 
 }
 
 
-    
-    if(diez == true){
-        alert("Task Completed!");
-        console.log("termino");
-    }
+
+if (diez == true) {
+    alert("Task Completed!");
+    console.log("termino");
+}
